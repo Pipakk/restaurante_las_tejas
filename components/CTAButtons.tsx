@@ -15,9 +15,7 @@ export function CTAButtons({
   return (
     <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${className}`}>
       <a
-        href={`https://wa.me/${SITE.whatsapp}`}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={`tel:${SITE.reservationPhone ?? SITE.phone}`}
         className="w-full sm:w-auto inline-flex justify-center items-center rounded-full bg-teja-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-teja-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teja-500 focus-visible:ring-offset-2 transition-colors"
       >
         {primaryLabel}

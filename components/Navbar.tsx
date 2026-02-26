@@ -66,15 +66,6 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href={`https://wa.me/${SITE.whatsapp}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-teja-600 px-4 py-2 text-sm font-medium text-white hover:bg-teja-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teja-600 focus-visible:ring-offset-2"
-            aria-label="Reservar o contactar por WhatsApp"
-          >
-            Reservar
-          </a>
           <button
             type="button"
             className="md:hidden p-2 rounded-lg text-ink hover:bg-teja-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-teja-600"
@@ -115,17 +106,6 @@ export function Navbar() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href={`https://wa.me/${SITE.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block py-3 rounded-lg px-3 bg-teja-600 text-white font-medium text-center hover:bg-teja-700"
-                  onClick={() => setOpen(false)}
-                >
-                  Reservar por WhatsApp
-                </a>
-              </li>
             </ul>
           </motion.nav>
         )}

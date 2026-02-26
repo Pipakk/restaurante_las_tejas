@@ -52,14 +52,6 @@ export function MapEmbed() {
               >
                 <span aria-hidden>📞</span> Llamar
               </a>
-              <a
-                href={`https://wa.me/${SITE.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-green-600 text-white px-5 py-3 font-medium hover:bg-green-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
-              >
-                <span aria-hidden>WhatsApp</span> Reservar
-              </a>
             </div>
           </div>
         </div>
