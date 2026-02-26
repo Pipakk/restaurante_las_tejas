@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-teja-50 text-ink font-body antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teja-600;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 sm:py-24;
+  }
+  .heading-display {
+    @apply font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-ink tracking-tight;
+  }
+  .heading-section {
+    @apply font-display text-2xl sm:text-3xl text-ink font-semibold;
+  }
+}
+
+/* Glassmorphism suave */
+.glass {
+  @apply bg-white/90 backdrop-blur-md;
+}
+
+/* Evitar saltos de layout con imágenes */
+img, video {
+  @apply max-w-full h-auto;
+}

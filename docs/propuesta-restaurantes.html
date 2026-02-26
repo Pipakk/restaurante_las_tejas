@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Planes de desarrollo web para restaurantes</title>
+  <style>
+    :root {
+      --teja: #a63f2a;
+      --teja-suave: #f8ece6;
+      --ink: #241e1b;
+      --gris: #666;
+      --borde: #e2d8d2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #faf7f4;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+      padding: 32px 40px 40px;
+    }
+
+    h1 {
+      font-family: "Georgia", "Times New Roman", serif;
+      margin: 0 0 4px;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      font-size: 14px;
+      color: var(--gris);
+    }
+
+    .intro {
+      font-size: 14px;
+      color: var(--gris);
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .plan {
+      border-radius: 16px;
+      border: 1px solid var(--borde);
+      padding: 18px 18px 16px;
+      background: #fff;
+      page-break-inside: avoid;
+    }
+
+    .plan.pro {
+      background: radial-gradient(circle at top left, #fef7f4, #ffffff);
+      border-color: var(--teja);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    }
+
+    .plan.premium {
+      background: radial-gradient(circle at top left, #fbeee8, #ffffff);
+    }
+
+    .plan-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .plan-name {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 18px;
+    }
+
+    .badge {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid var(--teja);
+      color: var(--teja);
+      background: #fff;
+    }
+
+    .price {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--teja);
+      font-weight: 600;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--gris);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 12px;
+      color: var(--gris);
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 26px 0 12px;
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    th, td {
+      border: 1px solid #e5dfda;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #f5efea;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #fbf8f6;
+    }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--gris);
+    }
+
+    .footer strong {
+      color: var(--teja);
+    }
+
+    @page {
+      margin: 16mm 16mm;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Planes de desarrollo web para restaurantes</h1>
+    <p class="subtitle">Tres niveles de servicio para que elijas cuánto quieres delegar.</p>
+
+    <p class="intro">
+      Todas las opciones incluyen una web moderna, adaptada a móvil y orientada a reservas.
+      Cambia únicamente el nivel de soporte, las revisiones y el tipo de acompañamiento.
+    </p>
+
+    <div class="grid">
+      <!-- BÁSICO -->
+      <div class="plan">
+        <div class="plan-title">
+          <div class="plan-name">Plan Básico</div>
+          <span class="badge">Presencia online</span>
+        </div>
+        <p class="price">200 € desarrollo · 10 €/mes mantenimiento</p>
+        <p class="hint">Para estar en Internet de forma profesional, sin complicaciones.</p>
+        <ul>
+          <li>Web moderna y responsive (móvil, tablet y ordenador).</li>
+          <li>Secciones: Inicio, Carta, Contacto, Reseñas.</li>
+          <li>SEO básico (estructura, títulos y descripciones).</li>
+          <li>Hosting y dominio incluidos.</li>
+          <li>Certificado SSL (https).</li>
+          <li>Mantenimiento técnico mensual.</li>
+          <li>Copias de seguridad periódicas.</li>
+          <li>Monitorización básica (web online).</li>
+        </ul>
+      </div>
+
+      <!-- PRO -->
+      <div class="plan pro">
+        <div class="plan-title">
+          <div class="plan-name">Plan Pro</div>
+          <span class="badge">Recomendado</span>
+        </div>
+        <p class="price">200 € desarrollo · 20 €/mes mantenimiento</p>
+        <p class="hint">Para tener la web siempre al día y con soporte rápido.</p>
+        <ul>
+          <li>Todo lo del Plan Básico.</li>
+          <li>Soporte técnico con respuesta &lt; 48 h.</li>
+          <li>Revisión trimestral de la web.</li>
+          <li>Pequeñas modificaciones cada trimestre (carta, textos, fotos).</li>
+          <li>Optimización de rendimiento trimestral.</li>
+          <li>Revisión de formularios y sistema de reservas.</li>
+        </ul>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="plan premium">
+        <div class="plan-title">
+          <div class="plan-name">Plan Premium</div>
+          <span class="badge">Tranquilidad total</span>
+        </div>
+        <p class="price">200 € desarrollo · 40 €/mes mantenimiento</p>
+        <p class="hint">Para olvidarte de la parte técnica y hacer evolucionar la web.</p>
+        <ul>
+          <li>Todo lo del Plan Pro.</li>
+          <li>Soporte prioritario.</li>
+          <li>Modificaciones y ajustes bajo demanda.</li>
+          <li>Revisión continua de rendimiento.</li>
+          <li>Auditorías periódicas de ciberseguridad.</li>
+          <li>Monitorización avanzada.</li>
+          <li>Asesoramiento técnico estratégico.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section-title">Comparativa rápida</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Básico</th>
+          <th>Pro</th>
+          <th>Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Precio mensual</td>
+          <td>10 €/mes</td>
+          <td>20 €/mes</td>
+          <td>40 €/mes</td>
+        </tr>
+        <tr>
+          <td>Hosting, dominio y SSL</td>
+          <td>Incluidos</td>
+          <td>Incluidos</td>
+          <td>Incluidos</td>
+        </tr>
+        <tr>
+          <td>Soporte</td>
+          <td>Básico</td>
+          <td>Respuesta &lt; 48 h</td>
+          <td>Prioritario</td>
+        </tr>
+        <tr>
+          <td>Modificaciones de contenido</td>
+          <td>No incluidas</td>
+          <td>Trimestrales</td>
+          <td>Cuando las necesites</td>
+        </tr>
+        <tr>
+          <td>Revisiones de la web</td>
+          <td>No incluido</td>
+          <td>Revisión trimestral</td>
+          <td>Revisión continua</td>
+        </tr>
+        <tr>
+          <td>Auditoría de seguridad</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Sí, periódica</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>
+        Elige el plan que mejor encaje con tu restaurante y, si tienes dudas,
+        podemos comentar juntos cuál se ajusta más a tu situación.
+      </p>
+      <p>
+        <strong>“Invertir en una web profesional no es un gasto, es una herramienta
+        para aumentar reservas y fortalecer la marca.”</strong>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
