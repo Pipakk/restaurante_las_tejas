@@ -40,10 +40,15 @@ export function MapEmbed() {
             </div>
             <div>
               <h3 className="font-display text-xl text-ink mb-2">Horarios</h3>
-              <p className="text-ink/80">{SITE.schedule.weekdays}</p>
-              {!SITE.schedule.closed.startsWith('TODO') && (
-                <p className="text-ink/70 text-sm mt-1">{SITE.schedule.closed}</p>
-              )}
+              <ul className="text-ink/80 text-sm space-y-1 list-none p-0 m-0">
+                <li><strong>Lunes:</strong> Cerrado</li>
+                <li><strong>Martes:</strong> 7:00–24:00</li>
+                <li><strong>Miércoles:</strong> 7:00–24:00</li>
+                <li><strong>Jueves:</strong> 7:00–24:00</li>
+                <li><strong>Viernes:</strong> 7:00–24:00</li>
+                <li><strong>Sábado:</strong> 7:00–24:00</li>
+                <li><strong>Domingo:</strong> 7:00–24:00</li>
+              </ul>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
               <a

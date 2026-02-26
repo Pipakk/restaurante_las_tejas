@@ -20,10 +20,10 @@ export const SITE = {
   googleMapsUrl: 'https://www.google.com/maps/place/Meson+Restaurante+Las+Tejas,+desde+1978/@40.3494991,-3.8169708,16z/data=!4m12!1m2!2m1!1sRestaurantes!3m8!1s0xd418937bb91f4bd:0xc9cbb38e603e65fe!8m2!3d40.3494752!4d-3.8169365!9m1!1b1!15sCgxSZXN0YXVyYW50ZXNaDiIMcmVzdGF1cmFudGVzkgEKcmVzdGF1cmFudJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOU2FuQnRUMmhSUlJBQuABAPoBBAgAEDc!16s%2Fg%2F1tdh54y2?entry=ttu',
   // Coordenadas para el iframe del mapa
   googleMapsCoords: { lat: 40.3494752, lng: -3.8169365 },
-  // Horarios: TODO reemplazar por horarios reales
   schedule: {
-    weekdays: 'TODO: ej. Lunes a Domingo 13:00 - 16:30, 20:30 - 23:30',
-    closed: 'TODO: ej. Cerrado los martes (opcional)',
+    weekdays:
+      'Lunes: cerrado. Martes: 7:00–24:00. Miércoles: 7:00–24:00. Jueves: 7:00–24:00. Viernes: 7:00–24:00. Sábado: 7:00–24:00. Domingo: 7:00–24:00.',
+    closed: 'TODO',
   },
   // Link a plataforma de reservas; si no hay, se usará teléfono/WhatsApp
   reservationUrl: null as string | null, // ej. 'https://...' o null
