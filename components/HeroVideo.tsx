@@ -1,28 +1,23 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SITE } from '@/data/site';
 import { CTAButtons } from './CTAButtons';
 
-const FALLBACK_HERO = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=90';
+// Póster del mismo video del filete (Mixkit); nunca imagen genérica de restaurante
+const VIDEO_POSTER = 'https://assets.mixkit.co/videos/45719/45719-thumb-720-2.jpg';
 
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [fallback, setFallback] = useState(false);
-  const [heroError, setHeroError] = useState(false);
   const hasVideo = SITE.heroVideo && !SITE.heroVideo.startsWith('TODO');
-  const heroSrc = heroError || !SITE.heroImage?.startsWith('/') ? (SITE.heroImageFallback ?? FALLBACK_HERO) : SITE.heroImage;
 
   useEffect(() => {
-    if (!hasVideo) {
-      setFallback(true);
-      return;
-    }
+    if (!hasVideo) return;
     const v = videoRef.current;
     if (!v) return;
-    v.play().catch(() => setFallback(true));
+    v.play().catch(() => {});
   }, [hasVideo]);
 
   return (
@@ -57,9 +52,9 @@ export function HeroVideo() {
         </motion.div>
       </div>
 
-      {/* Video debajo del bloque de texto */}
+      {/* Siempre video del filete (o póster del filete si no hay video configurado) */}
       <div className="relative w-full bg-ink min-h-[40vh] flex items-center justify-center">
-        {hasVideo && !fallback ? (
+        {hasVideo ? (
           <video
             ref={videoRef}
             src={SITE.heroVideo!}
@@ -67,20 +62,17 @@ export function HeroVideo() {
             muted
             loop
             playsInline
-            poster={heroSrc}
+            poster={VIDEO_POSTER}
             aria-hidden
           />
         ) : (
           <div className="relative w-full max-h-[70vh] aspect-video">
             <Image
-              src={heroSrc}
+              src={VIDEO_POSTER}
               alt=""
               fill
               className="object-contain object-center"
-              priority
               sizes="100vw"
-              quality={90}
-              onError={() => setHeroError(true)}
             />
           </div>
         )}
